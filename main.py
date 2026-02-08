@@ -13,7 +13,8 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
     "credentials.json", scope
 )
 client = gspread.authorize(creds)
-sheet = client.open("Global_DevOps_Relocation_Jobs").sheet1
+sheet = client.open_by_key("1AbCDEFghIJkLMnoPQRstuVWxyz123456").sheet1
+
 
 # Fetch jobs from RemoteOK
 url = "https://remoteok.com/api"
